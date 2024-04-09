@@ -61,17 +61,246 @@
 
       
   
-        a.active {
-          color: palevioletred;
-          font-weight: 700;
-          
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+  
+
+.skip {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+ul {
+  list-style-type: none; 
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: flex;
+  padding: 8px;
+  background-color: pink;
+  border: 1px solid black;
+}
+
+.active {
+  background-color: white;
+  font-weight: bold;
+  color: fuchsia;
+}
+
+.nav-bar {
+  padding: 20px;
+  margin: 20px auto;
+  text-align: center;
+}
+h1{
+  padding: 50px;
+  margin: 20px;
+  text-align: center;
+  background: rgb(63,251,203);
+  background: linear-gradient(90deg, rgba(63,251,203,1) 0%, rgba(207,156,228,1) 49%, rgba(243,126,252,1) 67%, rgba(255,217,34,1) 100%);
+}
+
+h2{
+  padding-top: 5px;
+  text-align: left;
+  border-spacing: 10px;
+}
+
+body {
+  font-family: 'Brooklyn', 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: black;
+  padding-left: 50px;
+  
+}
+
+img{
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 20px;
+  align-items: center;
+}
+
+.first-image{
+  display: flex;
+  justify-content: center;
+}
+.ingredients{
+  padding: 20px;
+  margin: 20px;
+  text-align: left;
+}
+.ingredients li{
+  padding: 20px;
+  margin: 20px;
+  text-align: left;
+}
+
+.second-image{
+  display: flex;
+  justify-content: center;
+}
+.ingredients-two{
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+.ingredients-two li{
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: ivory;
+  float: none;
+  list-style: horizontal;
+}
+
+.third-image{
+  display: flex;
+  justify-content: center;
+}
+
+.third-image img:nth-child(3) {
+  display: block;
+  margin: 20px auto;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+}
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+  .gallery{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .gallery img{
+    width: 100%;
+    border: 2px dashed black;
+  }
+
+  .nav-bar {
+    font-size: 20px;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Desktop View */
+@media screen and (max-width: 1900px) {
+.skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  
+  .skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+  }
+
+  body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background: #f4f4f4;
+    margin: 40px;
+    padding: 3;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    list-style-type: none;
+    justify-content: space-evenly;
+  
+    li {
+      padding: 6px 0;
+  
+      a {
+        position: relative;
+        display: block;
+        padding: 9px 0;
+        font-size: large;
+        font-family: Poppins, sans-serif;
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: 1s;
+  
+        &::after {
+          position: absolute;
+          content: "";
+          top: 100%;
+          left: 0;
+          width: 100%;
+          height: 3px;
+          background:hotpink;
+          transform: scaleX(0);
+          transform-origin: right;
+          transition: transform 0.5s;
         }
   
         &:hover {
-          color: palevioletred;
+          color:#9200FF;
         }
-
-
+  
+        &:hover::after {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+        
+      }
+      a.active {
+        color:#9200FF;
+        font-weight: 700;
+      }
+    }
+  }
 .first-image {
   display: block;
   margin-left: auto;
@@ -79,17 +308,7 @@
   width: 50%;
   }
 
- .ingredients-one{
-    float: none;
-    padding: 20px;
-    margin: 20px;
-    text-align: center;
-    border: 5px solid #f1a886;
-    border-radius: 5px;
-    background-color: #ffe8f8;
-    transition: transform .5s; 
-  
-  }
+ 
   
   .fact li:hover {
     transform: scale(1.04); 
@@ -112,3 +331,8 @@
     margin-right: auto;
     width: 50%;
   }
+}
+    
+  
+
+  
